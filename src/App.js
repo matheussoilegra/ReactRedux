@@ -3,19 +3,22 @@ import { connect } from 'react-redux';
 import appActions from './actions/appActions';
 
 class Children extends Component {
-  setText() {
+  setNewText() {
     this.props.dispatch(appActions.setText('Aquele texto'));
+    // Aqui estou habilitando a execução da ação "setText" que criei em "appActions"
   }
+
   render() {
     return (
       <Fragment>
-        <button onClick={() => this.setText()}>Mudar texto</button>
+        <button onClick={() => this.setNewText()}>Mudar texto</button>
       </Fragment>
     );
   }
 }
 
 const ChildrenConnected = connect(store => ({ text: store.text }))(Children);
+// Aqui estou atribuindo meu componente "Children" à const "ChildrenConnected"
 
 class App extends Component {
   render() {
@@ -26,6 +29,8 @@ class App extends Component {
       </Fragment>
     );
   }
+  // Em "<ChildrenConnected />" estou habilitando que o button seja renderizado no componente "App"
 }
 
 export default connect(store => ({ text: store.text }))(App);
+// Aqui estou estabelecendo uma conexão entre o componente "App" e a "store" que estou provendo para essa aplicação
