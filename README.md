@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The development of this project was done using this [article - Entendendo React e Redux de uma vez por todas](https://medium.com/@hliojnior_34681/entenda-react-e-redux-de-uma-vez-por-todas-c761bc3194ca) as reference.
+
 ## Available Scripts
 
 In the project directory, you can run:
